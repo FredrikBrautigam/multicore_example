@@ -1,0 +1,18 @@
+[package]
+name = "multicore_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+static_cell = "2.1.0"
+cortex-m-rt = "0.7.3"
+embassy-time = "0.3.2"
+defmt = "0.3.8"
+
+[dependencies.embassy-executor]
+version = "0.6.0"
+features = ["arch-cortex-m", "executor-thread", "integrated-timers", "task-arena-size-4096"]
+
+[dependencies.embassy-rp]
+version = "0.2.0"
+features = ["critical-section-impl", "time-driver"]
